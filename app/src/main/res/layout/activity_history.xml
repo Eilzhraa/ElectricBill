@@ -5,7 +5,6 @@
     android:background="#F8F9FA"
     android:padding="20dp">
 
-    <!-- BAHAGIAN TAJUK (HEADER) -->
     <LinearLayout
         android:id="@+id/headerArea"
         android:layout_width="match_parent"
@@ -20,7 +19,7 @@
             android:text="Calculation History"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="#005CA9" /> <!-- Biru Korporat -->
+            android:textColor="#005CA9" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +30,6 @@
             android:textSize="13sp" />
     </LinearLayout>
 
-    <!-- LISTVIEW KAU (Diletakkan dalam kontena putih biar nampak macam kad) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

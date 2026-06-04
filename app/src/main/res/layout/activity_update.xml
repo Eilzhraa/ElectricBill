@@ -12,7 +12,6 @@
         android:padding="20dp"
         android:gravity="center_horizontal">
 
-        <!-- HEADER HALAMAN -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +22,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"/>
 
-        <!-- KAD FORM EDIT PUTIH -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +30,6 @@
             android:padding="18dp"
             android:layout_marginBottom="32dp">
 
-            <!-- Input Nama Bulan -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +52,6 @@
                 android:background="#EAEAEA"
                 android:layout_marginBottom="18dp"/>
 
-            <!-- Input kWh Usage -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,7 +74,6 @@
                 android:background="#EAEAEA"
                 android:layout_marginBottom="18dp"/>
 
-            <!-- Input Rebate Value -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,7 +82,6 @@
                 android:textColor="#333333"
                 android:layout_marginBottom="4dp" />
 
-            <!-- Guna ID pembantu mengikut sistem update kau -->
             <EditText
                 android:id="@+id/etUpdateRebate"
                 android:layout_width="match_parent"
@@ -99,7 +93,6 @@
 
         </LinearLayout>
 
-        <!-- BUTANG SUBMIT / SAVE -->
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
@@ -110,7 +103,6 @@
             android:backgroundTint="#005CA9"
             android:layout_marginBottom="14dp"/>
 
-        <!-- BUTANG CANCEL -->
         <Button
             android:id="@+id/btnUpdateBack"
             android:layout_width="match_parent"

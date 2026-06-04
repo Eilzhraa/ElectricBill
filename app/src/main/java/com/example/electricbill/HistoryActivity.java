@@ -30,7 +30,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         Button btnHistoryBack = findViewById(R.id.btnHistoryBack);
         btnHistoryBack.setOnClickListener(v -> {
-            finish(); // Arahan ni sepantas kilat tutup page history dan terus nampak dashboard semula
+            finish();
         });
     }
     @Override
@@ -81,7 +81,7 @@ public class HistoryActivity extends AppCompatActivity {
                                 SQLiteDatabase db = dbcenter.getWritableDatabase();
                                 db.execSQL("delete from bill_history where id = '" + selectionId + "'");
                                 Toast.makeText(getApplicationContext(), "Record Deleted Successfully", Toast.LENGTH_SHORT).show();
-                                RefreshList(); // Refresh list to show updated logs
+                                RefreshList();
                                 break;
                         }
                     }

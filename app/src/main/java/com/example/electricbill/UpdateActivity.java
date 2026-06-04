@@ -21,14 +21,12 @@ public class UpdateActivity extends AppCompatActivity {
 
         dbHelper = new DataHelper(this);
 
-        // DI SINI KITA DAH SELARASKAN ID SEBIJIK MACAM XML BARU KAU
         etMonth = findViewById(R.id.etMonth);
         etKwh = findViewById(R.id.etKwh);
-        etRebate = findViewById(R.id.etUpdateRebate); // Guna ID dari XML baru
-        btnUpdate = findViewById(R.id.btnUpdate);     // Guna ID dari XML baru
-        btnBack = findViewById(R.id.btnUpdateBack);   // Guna ID dari XML baru
+        etRebate = findViewById(R.id.etUpdateRebate);
+        btnUpdate = findViewById(R.id.btnUpdate);
+        btnBack = findViewById(R.id.btnUpdateBack);
 
-        // AMBIL DATA LAMA UNTUK DIPAPARKAN
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM bill_history WHERE id = '" + getIntent().getStringExtra("bill_id") + "'", null);
 
@@ -37,9 +35,8 @@ public class UpdateActivity extends AppCompatActivity {
             etKwh.setText(cursor.getString(2));
             etRebate.setText(cursor.getString(3));
         }
-        cursor.close(); // Ditutup selepas data selesai dibaca dengan selamat!
+        cursor.close();
 
-        // PROSES KEMASKINI DATA (UPDATE)
         btnUpdate.setOnClickListener(arg0 -> {
             String kwhStr = etKwh.getText().toString().trim();
             String rebateStr = etRebate.getText().toString().trim();
@@ -52,7 +49,6 @@ public class UpdateActivity extends AppCompatActivity {
             double kwh = Double.parseDouble(kwhStr);
             int rebatePercent = Integer.parseInt(rebateStr);
 
-            // LOGIK PENGIRAAN BLOCK RATE YANG BETUL (Ikut sample calculations)
             double totalCharges = 0;
             if (kwh <= 200) {
                 totalCharges = kwh * 0.218;
@@ -67,7 +63,6 @@ public class UpdateActivity extends AppCompatActivity {
             double rebateAmount = totalCharges * (rebatePercent / 100.0);
             double finalCost = totalCharges - rebateAmount;
 
-            // MASUKKAN DATA BARU KE DALAM SQLITE
             SQLiteDatabase dbWrite = dbHelper.getWritableDatabase();
             dbWrite.execSQL("UPDATE bill_history SET month='" + etMonth.getText().toString() +
                     "', kwh='" + kwh +
@@ -80,7 +75,6 @@ public class UpdateActivity extends AppCompatActivity {
             finish(); // Tutup page edit dan kembali ke list
         });
 
-        // BUTANG CANCEL / PATAH BALIK
         btnBack.setOnClickListener(v -> finish());
     }
 }

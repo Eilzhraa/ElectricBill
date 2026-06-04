@@ -30,7 +30,6 @@ public class ViewDetailActivity extends AppCompatActivity {
         cursor = db.rawQuery("SELECT * FROM bill_history WHERE id = '" + getIntent().getStringExtra("bill_id") + "'", null);
 
         if (cursor.moveToFirst()) {
-            // Kita set nilai angka sahaja supaya susunan sebaris kiri-kanan tak pecah
             tvId.setText("ID: #" + cursor.getString(0));
             tvMonth.setText(cursor.getString(1));
             tvKwh.setText(cursor.getString(2) + " kWh");
