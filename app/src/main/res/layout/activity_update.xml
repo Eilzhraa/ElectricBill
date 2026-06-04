@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- HEADER HALAMAN -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modify Record Entries"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#005CA9"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- KAD FORM EDIT PUTIH -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="18dp"
+            android:layout_marginBottom="32dp">
+
+            <!-- Input Nama Bulan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Billing Month"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etMonth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="e.g. January"
+                android:inputType="text"
+                android:paddingLeft="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EAEAEA"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- Input kWh Usage -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricity Consumption (kWh)"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etKwh"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter units (1 - 1000)"
+                android:inputType="numberDecimal"
+                android:paddingLeft="4dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EAEAEA"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- Input Rebate Value -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebate Rate (%)"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Guna ID pembantu mengikut sistem update kau -->
+            <EditText
+                android:id="@+id/etUpdateRebate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Value between 0 - 5"
+                android:inputType="number"
+                android:paddingLeft="4dp"
+                android:layout_marginBottom="6dp" />
+
+        </LinearLayout>
+
+        <!-- BUTANG SUBMIT / SAVE -->
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save Alterations"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#005CA9"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- BUTANG CANCEL -->
+        <Button
+            android:id="@+id/btnUpdateBack"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#424242" />
+
+    </LinearLayout>
+</ScrollView>
