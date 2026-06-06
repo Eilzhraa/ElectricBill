@@ -71,8 +71,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Program: Mobile Technology and Development"
-            android:textColor="#555555"/>
+            android:text="Course Name: Mobile Technology and Development"
+            android:textColor="#555555" />
     </LinearLayout>
 
     <TextView
