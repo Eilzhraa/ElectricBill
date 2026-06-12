@@ -17,7 +17,7 @@ public class DataHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table bill_history(id integer primary key autoincrement, month text null, kwh real null, rebate real null, total_charges real null, final_cost real null);";
         Log.d("Data", "onCreate: " + sql);
-        db.execSQL(sql); //
+        db.execSQL(sql);
     }
 
     @Override

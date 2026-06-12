@@ -72,7 +72,7 @@ public class UpdateActivity extends AppCompatActivity {
                     "' WHERE id='" + getIntent().getStringExtra("bill_id") + "'");
 
             Toast.makeText(getApplicationContext(), "Data Updated Successfully!", Toast.LENGTH_SHORT).show();
-            finish(); // Tutup page edit dan kembali ke list
+            finish();
         });
 
         btnBack.setOnClickListener(v -> finish());
